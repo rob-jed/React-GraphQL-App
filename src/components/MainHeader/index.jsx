@@ -13,18 +13,19 @@ const defaultProps = {
     children: null,
 };
 
-const PrimaryLayout = ({ customClass, children }) => (
-    <div className={
+const MainHeader = ({ customClass, children }) => (
+    <header className={
         classNames(
-            'app-inner',
-            customClass,
-        )}
+            'main-header',
+            customClass
+        )
+    }
     >
-        {children}
-    </div>
+        { children }
+    </header>
 );
 
-PrimaryLayout.propTypes = propTypes;
-PrimaryLayout.defaultProps = defaultProps;
+MainHeader.propTypes = propTypes;
+MainHeader.defaultProps = defaultProps;
 
-export default PrimaryLayout;
+export default MainHeader;
