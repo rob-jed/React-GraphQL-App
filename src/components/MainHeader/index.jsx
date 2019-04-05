@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import { classNames } from 'services/Styles';
 
+import './styles.scss';
+
 const propTypes = {
     customClass: PropTypes.string,
     children: PropTypes.node,

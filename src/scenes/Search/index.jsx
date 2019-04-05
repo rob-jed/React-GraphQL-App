@@ -1,9 +1,12 @@
 import React from 'react';
 
+import PrimaryLayout from 'components/PrimaryLayout';
+import MainHeader from 'components/MainHeader';
+
 const Search = () => (
-    <div>
-        <h1>Search</h1>
-    </div>
+    <PrimaryLayout>
+        <MainHeader />
+    </PrimaryLayout>
 );
 
 export default Search;
