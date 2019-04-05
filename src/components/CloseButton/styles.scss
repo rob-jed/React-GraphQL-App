@@ -1,0 +1,32 @@
+.close-button {
+    width: 18px;
+    height: 18px;
+
+    position: relative;
+
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: rgba(18, 43, 79, .3);
+}
+
+.close-button:before,
+.close-button:after {
+    content: ' ';
+
+    width: 2px;
+    height: 11px;
+
+    position: absolute;
+    top: calc(50% - 5px);
+    left: 7px;
+
+    background-color: #fff;
+}
+
+.close-button:before {
+    transform: rotate(45deg);
+}
+
+.close-button:after {
+    transform: rotate(-45deg);
+}
