@@ -3,8 +3,20 @@ import PropTypes from 'prop-types';
 
 import UserCard from '../UserCard';
 
+import './styles.scss';
+
 const propTypes = {
-    users: PropTypes.arrayOf(PropTypes.object).isRequired,
+    users: PropTypes.arrayOf(
+        PropTypes.shape({
+            node: PropTypes.shape({
+                login: PropTypes.string,
+                avatarUrl: PropTypes.string,
+                name: PropTypes.string,
+                company: PropTypes.string,
+                location: PropTypes.string,
+            })
+        })
+    ).isRequired,
 };
 
 const UsersList = ({ users }) => (

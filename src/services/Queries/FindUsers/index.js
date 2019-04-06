@@ -10,6 +10,7 @@ export default gql`
                         name,
                         avatarUrl,
                         company,
+                        location,
                     }
                 },
             },

@@ -1,0 +1,45 @@
+$borderColor: #d8dfe6;
+
+.user-card {
+    margin-bottom: 30px;
+
+    border: 1px solid $borderColor;
+    border-radius: 4px;
+    background-color: #fff;
+
+    transition: border-color .2s;
+
+    &:hover {
+        border-color: darken($borderColor, 15);
+    }
+
+    .avatar {
+        margin-right: 30px;
+    }
+}
+
+.user-card-inner {
+    display: flex;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.user-card-info {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+
+    h3 {
+        width: 50%;
+
+        margin: 0 0 10px;
+
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    h3 span {
+        font-weight: normal;
+    }
+}
