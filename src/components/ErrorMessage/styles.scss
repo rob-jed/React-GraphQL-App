@@ -1,0 +1,10 @@
+@import "styles/variables.scss";
+
+.error-message {
+    margin: 30px 0;
+
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    color: $colorError;
+}
