@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { addProtocolIfMissing } from 'services/URLs';
+
 import './styles.scss';
 
 const propTypes = {
@@ -32,7 +34,11 @@ const UserRepositoryCard = ({
             {
                 homepageUrl
                     && (
-                        <a href={homepageUrl} target="_blank" rel="noopener noreferrer">
+                        <a
+                            href={addProtocolIfMissing(homepageUrl)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             View homepage
                         </a>
                     )

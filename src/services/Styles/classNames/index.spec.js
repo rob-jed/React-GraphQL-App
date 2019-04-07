@@ -1,7 +1,7 @@
 /* eslint-disable sonarjs/no-redundant-boolean */
 import classNames from '.';
 
-describe('classNames', () => {
+describe('Styles => classNames', () => {
     it('concatenates strings', () => {
         expect(classNames('btn', 'btn--active', 'btn--loading'))
             .toEqual('btn btn--active btn--loading');
