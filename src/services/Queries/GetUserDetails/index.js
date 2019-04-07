@@ -10,6 +10,7 @@ export default gql`
             bio,
             repositories(affiliations: [OWNER], first: 100) {
                 nodes {
+                    id,
                     name,
                     description,
                     url,

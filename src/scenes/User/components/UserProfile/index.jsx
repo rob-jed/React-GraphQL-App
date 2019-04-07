@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Avatar from 'components/Avatar';
 import UserDetails from 'components/UserDetails';
 
+import UserRepositoriesList from '../UserRepositoriesList';
+
 import './styles.scss';
 
 const propTypes = {
@@ -16,6 +18,7 @@ const propTypes = {
         name: PropTypes.string,
         respositories: PropTypes.shape({
             nodes: PropTypes.arrayOf(PropTypes.shape({
+                id: PropTypes.string,
                 description: PropTypes.string,
                 homepageUrl: PropTypes.string,
                 name: PropTypes.string,
@@ -46,6 +49,13 @@ const UserProfile = ({
             location={location}
             bio={bio}
         />
+
+        {
+            repositories.nodes.length > 0
+                && (
+                    <UserRepositoriesList repositories={repositories.nodes} />
+                )
+        }
     </div>
 );
 

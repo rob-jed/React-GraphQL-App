@@ -1,0 +1,26 @@
+.user-repository-card {
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #f7f9fa;
+    border-radius: 4px;
+    background-color: #f7f9fa;
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .user-repository-links a {
+        margin-right: 20px;
+
+        font-weight: bold;
+
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
