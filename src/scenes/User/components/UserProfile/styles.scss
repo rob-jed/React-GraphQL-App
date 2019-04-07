@@ -1,0 +1,23 @@
+.user-profile {
+    display: flex;
+    align-items: center;
+
+    max-width: 980px;
+    padding: 25px;
+
+    margin: 30px auto;
+
+    border: 1px solid #d8dfe6;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.user-profile .avatar {
+    width: 150px;
+
+    margin-right: 20px;
+}
+
+.user-profile .user-details {
+    flex: 1;
+}

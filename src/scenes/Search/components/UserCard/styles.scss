@@ -12,10 +12,14 @@ $borderColor: #d8dfe6;
     &:hover {
         border-color: darken($borderColor, 15);
     }
+}
 
-    .avatar {
-        margin-right: 30px;
-    }
+.user-card .avatar {
+    margin-right: 30px;
+}
+
+.user-card .user-details {
+    flex: 1;
 }
 
 .user-card-inner {
@@ -23,23 +27,4 @@ $borderColor: #d8dfe6;
     align-items: center;
 
     padding: 20px;
-}
-
-.user-card-info {
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-
-    h3 {
-        width: 50%;
-
-        margin: 0 0 10px;
-
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    h3 span {
-        font-weight: normal;
-    }
 }

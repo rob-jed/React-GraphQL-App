@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import Avatar from 'components/Avatar';
+import UserDetails from 'components/UserDetails';
 
 import './styles.scss';
 
@@ -29,42 +30,12 @@ const UserCard = ({
         <Link to={`user/${login}`} className="user-card-inner">
             <Avatar url={avatarUrl} alt={name} />
 
-            <div className="user-card-info">
-                {
-                    name
-                        && (
-                            <h3>
-                                Name: &nbsp;
-                                <span>{ name }</span>
-                            </h3>
-                        )
-                }
-
-                <h3>
-                    Login: &nbsp;
-                    <span>{ login }</span>
-                </h3>
-
-                {
-                    company
-                        && (
-                            <h3>
-                                Company: &nbsp;
-                                <span>{ company }</span>
-                            </h3>
-                        )
-                }
-
-                {
-                    location
-                        && (
-                            <h3>
-                                Location: &nbsp;
-                                <span>{ location }</span>
-                            </h3>
-                        )
-                }
-            </div>
+            <UserDetails
+                login={login}
+                name={name}
+                company={company}
+                location={location}
+            />
         </Link>
     </li>
 );
