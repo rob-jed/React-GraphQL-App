@@ -43,4 +43,4 @@ const UserRepositoryCard = ({
 
 UserRepositoryCard.propTypes = propTypes;
 
-export default UserRepositoryCard;
+export default React.memo(UserRepositoryCard);
