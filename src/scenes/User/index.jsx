@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 
 import PrimaryLayout from 'components/PrimaryLayout';
+import ButtonLink from 'components/ButtonLink';
 import Spinner from 'components/Spinner';
 import ErrorMessage from 'components/ErrorMessage';
 
 import { GetUserDetails } from 'services/Queries';
 
 import UserProfile from './components/UserProfile';
+
+import './styles.scss';
 
 const propTypes = {
     match: PropTypes.shape({
@@ -25,7 +28,9 @@ const User = ({
         }
     }
 }) => (
-    <PrimaryLayout>
+    <PrimaryLayout customClass="user-profile-page">
+        <ButtonLink url="/" text="Go back" customClass="btn-home" />
+
         <Query query={GetUserDetails} variables={{ login: userLogin }}>
             {
                 ({ loading, error, data }) => {

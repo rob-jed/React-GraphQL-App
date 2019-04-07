@@ -1,0 +1,20 @@
+$btnBorderColor: #d8dfe6;
+
+.btn {
+    padding: 10px 20px;
+
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+
+    border: 1px solid $btnBorderColor;
+    border-radius: 4px;
+
+    background-color: #fff;
+
+    transition: border-color .2s;
+
+    &:hover {
+        border-color: darken($btnBorderColor, 20);
+    }
+}
