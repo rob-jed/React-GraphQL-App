@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Query } from 'react-apollo';
+import { useDebounce } from 'use-debounce';
 
 import PrimaryLayout from 'components/PrimaryLayout';
 import MainHeader from 'components/MainHeader';
@@ -16,6 +17,7 @@ import './styles.scss';
 
 const Search = () => {
     const [searchValue, getSearchValue] = useState('');
+    const [debouncedSearchValue] = useDebounce(searchValue, 300);
 
     return (
         <PrimaryLayout>
@@ -29,9 +31,9 @@ const Search = () => {
             </MainHeader>
 
             {
-                searchValue
+                debouncedSearchValue
                     && (
-                        <Query query={FindUsers} variables={{ query: searchValue }}>
+                        <Query query={FindUsers} variables={{ query: debouncedSearchValue }}>
                             {
                                 ({ loading, error, data }) => {
                                     if (loading) {
